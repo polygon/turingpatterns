@@ -29,12 +29,19 @@ def evolve_fft2(field, pool):
 #  PROD = array([100, 50, 10, 5, 2])
 #  INH = array([200, 100, 20, 10, 4])
 #  AMOUNT = array([0.05, 0.04, 0.03, 0.02, 0.01])
-  PROD = array([170, 90, 60, 10, 4])
-  INH = array([230, 120, 80, 20, 6])
-  AMOUNT = array([0.05, 0.04, 0.03, 0.02, 0.01])
-#  PROD = array([4])
-#  INH = array([8])
-#  AMOUNT = array([0.01])
+
+#  PROD = array([170, 90, 60, 10, 4])
+#  INH = array([230, 120, 80, 20, 6])
+#  AMOUNT = array([0.05, 0.04, 0.03, 0.02, 0.01])
+
+#  PROD = array([130, 30])#, 4])
+#  INH = array([200, 60])#, 8])
+#  AMOUNT = array([0.03, 0.02])#, 0.01])
+
+  PROD = array([140, 50, 10, 5])
+  INH = array([220, 80, 14, 8])
+  AMOUNT = array([0.03, 0.02, 0.01, 0.005])
+
   prod = zeros((field.shape[0],field.shape[1],PROD.size))
   inh = zeros((field.shape[0],field.shape[1],PROD.size))
   Field = fft(field, axis=0)
